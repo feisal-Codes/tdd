@@ -8,6 +8,8 @@ describe("Cipher()", () => {
   it("return A when given N", () => {
     expect(Rotate("N", key)).toEqual("A");
   });
+  it("return O when given B", () => {});
+  expect(Rotate("B", key)).toEqual("O");
 
   it("return NO when given AB", () => {
     expect(Rotate("AB", key)).toEqual("NO");
