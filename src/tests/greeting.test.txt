@@ -1,0 +1,27 @@
+const greetings = (guest) => `Hello, ${guest}!`;
+const sum = (a, b) => a + b;
+const Name = "Feisal";
+
+//describe takes a string and a callback
+
+describe("greeting()", () => {
+  it("says Hello", () => {
+    expect(greetings("Jest")).toBe("Hello, Jest!");
+  });
+});
+
+describe("sum()", () => {
+  let result = sum(2, 5);
+
+  it("returns sum", () => {
+    expect(result).toBe(7);
+  });
+
+  it("name", () => {
+    expect(Name).toBe("Feisal");
+  });
+
+  it("says hello", () => {
+    expect(greetings(Name)).toBe("Hello, Feisal!");
+  });
+});

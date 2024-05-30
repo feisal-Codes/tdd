@@ -1,0 +1,24 @@
+// const FizzBuzz = require("../app");
+import FizzBuzz from "../app";
+
+describe("FizzBuzz()", () => {
+  it('returns "FizzBuzz" for multiple of 3 and 5', () => {
+    expect(FizzBuzz(15)).toBe("FizzBuzz");
+    expect(FizzBuzz(30)).toBe("FizzBuzz");
+  });
+
+  it('returns "Fizz" for multiples of 3', () => {
+    expect(FizzBuzz(9)).toBe("Fizz");
+    expect(FizzBuzz(18)).toBe("Fizz");
+    expect(FizzBuzz(3)).toBe("Fizz");
+  });
+
+  it('returns "Buzz" for multiples of 5', () => {
+    expect(FizzBuzz(10)).toBe("Buzz");
+    expect(FizzBuzz(20)).toBe("Buzz");
+  });
+  it("returns the given number for   multiples of neither 5 or 3", () => {
+    expect(FizzBuzz(11)).toBe(11);
+    expect(FizzBuzz(13)).toBe(13);
+  });
+});
