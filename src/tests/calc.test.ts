@@ -84,4 +84,9 @@ describe("Mocks", () => {
     const fakeAdd = jest.fn().mockImplementation((a, b) => a + b);
     expect(fakeAdd(1, 8)).toEqual(9);
   });
+
+  it("prints greetings", () => {
+    const printHello = jest.fn().mockImplementation((name) => `Hello ${name}`);
+    expect(printHello("Feisal")).toEqual("Hello Feisal");
+  });
 });
